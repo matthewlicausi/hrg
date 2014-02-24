@@ -1612,23 +1612,24 @@ ul.social-icons li a:hover {
 }
 /*================================================== * Info Boxes* ===============================================*/
 .info-box {
-	background:#eee !important;
-	border:1px solid #e4e4e4;
-	padding:6px;
+
+	border:6px solid #e4e4e4;
+	padding:0px;
 	margin-bottom:15px;
 }
 .info-box-inner {
-	background-image:linear-gradient(bottom,#fafafa 0%,#fff 100%);
-	background-image:-o-linear-gradient(bottom,#fafafa 0%,#fff 100%);
-	background-image:-moz-linear-gradient(bottom,#fafafa 0%,#fff 100%);
-	background-image:-webkit-linear-gradient(bottom,#fafafa 0%,#fff 100%);
-	background-image:-ms-linear-gradient(bottom,#fafafa 0%,#fff 100%);
+	background-image:linear-gradient(bottom,#fafafa 0%,#fff 30%);
+	background-image:-o-linear-gradient(bottom,#fafafa 0%,#fff 30%);
+	background-image:-moz-linear-gradient(bottom,#fafafa 0%,#fff 30%);
+	background-image:-webkit-linear-gradient(bottom,#fafafa 0%,#fff 30%);
+	background-image:-ms-linear-gradient(bottom,#fafafa 0%,#fff 30%);
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius:3px;
 	border:1px solid #e4e4e4;
-	padding:25px;
-	background:#fff;
+	padding:15px;
+	background-image:url('/img/transparent.png');
+	background-repeat:repeat;
 }
 .info-box p {
 	margin:0;
