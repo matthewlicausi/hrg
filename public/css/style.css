@@ -722,7 +722,7 @@ font-weight: 500;}
 /*--------------------------------------------------	CAROUSEL FEATURED WORK---------------------------------------------------*/
 #carousel-featuredwork .item {
 	padding:0;
-	height:410px;
+	height:200px;
 }
 #carousel-featuredwork .carousel-indicators {
 	margin-left: -31%;
@@ -1816,7 +1816,7 @@ ul.social-icons li a:hover {
 	-moz-background-size:cover !Important;
 	-o-background-size:cover !Important;
 	background-size:cover !Important;
-	background:url(../img/demo/3.jpg);
+	background:url(../img/wheatbg.jpg);
 	color:#fff;
 	background-attachment:fixed;
 }
