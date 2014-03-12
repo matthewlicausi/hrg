@@ -895,6 +895,24 @@ h1.small {
 	border-bottom:1px solid #ebebeb;
 	margin-bottom:35px;
 }
+.smalltitle-center {
+	position:relative;
+	border-bottom:1px solid #ebebeb;
+	margin-bottom:35px;
+	text-align:center;
+}
+.smalltitle-center span {
+	display:inline-block;
+	background-color:#fff;
+	padding:1px 12px;
+	position:relative;
+	color:#444;
+	font-size:20px;
+	top:12px;
+	padding-left:0 !important;
+	font-weight:700;
+	text-transform:uppercase;
+}
 .text-center.smalltitle span {
 	padding-left:12px !important;
 }
