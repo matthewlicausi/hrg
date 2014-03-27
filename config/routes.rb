@@ -1,4 +1,7 @@
 Hrgsite::Application.routes.draw do
+  resources :posts
+
+
   devise_for :users
   
   root :to => "admin#index"
