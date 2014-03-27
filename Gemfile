@@ -14,6 +14,9 @@ gem 'newrelic_rpm'
 # for user authentication
 gem 'devise'
 
+# for WYSIWYG blog posts
+gem 'tinymce-rails'
+
 
 
 # Gems used only for assets and not required
