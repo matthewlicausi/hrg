@@ -6,8 +6,14 @@ ruby '1.9.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# use postgresql database
 gem 'pg'
+# for site/server monitoring
 gem 'newrelic_rpm'
+
+# for user authentication
+gem 'devise'
+
 
 
 # Gems used only for assets and not required
