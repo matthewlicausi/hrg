@@ -17,7 +17,8 @@ gem 'devise'
 # for WYSIWYG blog posts
 gem 'tinymce-rails'
 
-
+# for uploading images
+gem "paperclip", "~> 4.1"
 
 # Gems used only for assets and not required
 # in production environments by default.
