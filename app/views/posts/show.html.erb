@@ -4,7 +4,10 @@
   <b>Title:</b>
   <%= @post.title %>
 </p>
-
+<p>
+  <b>Image:</b><br>
+  <%= image_tag @post.image.url %>
+</p>
 <p>
   <b>Body:</b><br>
   <%= @post.body.html_safe %>
