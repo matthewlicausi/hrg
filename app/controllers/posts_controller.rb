@@ -23,6 +23,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def get  
+	post = current_user.posts.find_by_id(params[:id])  
+	if post  
+		 send_file post.image.path, :type => post.image_content_type  
+	end  
+  end
+
   # GET /posts/new
   # GET /posts/new.json
   def new
