@@ -1,0 +1,63 @@
+	<!-- PAGE TITLE
+================================================== -->
+	<section class="pageheader-default text-center">
+	<div class="semitransparentbg">
+		<h1 class="animated fadeInLeftBig notransition">HRG News</h1>
+		<p class="animated fadeInRightBig  notransition container wowbreadcr">
+			 Stay up-to-date with our latest announcements and newsletters.
+		</p>
+	</div>
+	</section>
+	<div class="wrapsemibox">
+		<div class="semiboxshadow text-center">
+			<img src="/img/shp.png" class="img-responsive" alt="">
+		</div>
+		<!-- BLOG
+================================================== -->
+		<section class="container animated fadeInDown notransition">
+		<div class="row blogindex">
+			<!-- MAIN -->	
+			<div class="col-md-9">
+				<div class="row">
+					<div class="col-md-12">
+					    <!-- POSTS -->
+					    <% @posts.each do |post| %>
+							<div class="text-center">
+								<h2><%= post.title %></h2>
+								<span class="meta bottomspace30">By <%= link_to post.author, news_path(:author => post.author ) %><span class="bullet"> • </span> <%= post.created_at.strftime("%B %d, %Y") %> <span class="bullet"> • </span><%= link_to post.category, news_path(:category => post.category ) %></span>
+							</div>
+							<% if post.image?  %>
+							<div class="col-md-3 bottomspace20">
+								<%= image_tag post.image.url, :class => "img-responsive" %>
+							</div>
+							<div class="col-md-9 bottomspace20">
+							<% else %>
+							<div class="col-md-12 bottomspace20">
+							<% end %>
+								<p class="lead">
+									<%= HTML_Truncator.truncate(post.body.html_safe, 75).html_safe %>
+								</p>
+								<a href="ARTICLE LINK" class="btn btn-default">Read more</a>
+							</div>
+							<hr class="clearfix">
+							
+						<!-- / POSTS -->
+						<% end %>
+					</div>
+				</div>
+			</div>
+			<!-- SIDEBAR -->	
+			<div class="col-md-3">
+				<aside class="sidebar topspace30">
+					<div class="wowwidget">
+						<h4>Categories</h4>
+						<ul class="categories">
+							<li><%= link_to "HRG Consulting", news_path(:category=>"HRG Consulting") %></li>
+							<li><%= link_to "HRO Outsourcing", news_path(:category=>"HRO Outsourcing") %></li>
+							<li><%= link_to "Newsletters", news_path(:category=>"Newsletters") %></li>
+						</ul>
+					</div>
+				</aside>
+			</div><!-- end sidebar -->	
+		</div>
+		</section>

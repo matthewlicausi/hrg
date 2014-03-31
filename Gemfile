@@ -17,6 +17,9 @@ gem 'devise'
 # for WYSIWYG blog posts
 gem 'tinymce-rails'
 
+# for truncating HTML on the news index page
+gem "html_truncator", "~>0.2"
+
 # for uploading images
 gem "paperclip", "~> 4.1"
 

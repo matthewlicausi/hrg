@@ -1,6 +1,7 @@
 Hrgsite::Application.routes.draw do
   resources :posts
 
+  match "news" => "news#index"
 
   devise_for :users
   
