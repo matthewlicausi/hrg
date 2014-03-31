@@ -37,7 +37,7 @@
 								<p class="lead">
 									<%= HTML_Truncator.truncate(post.body.html_safe, 75).html_safe %>
 								</p>
-								<a href="ARTICLE LINK" class="btn btn-default">Read more</a>
+								<%= link_to "Read More", post_with_title_path(post, :title => post.title), html_options = {:class=>"btn btn-default"} %>
 							</div>
 							<hr class="clearfix">
 							

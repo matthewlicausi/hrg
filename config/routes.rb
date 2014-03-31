@@ -9,7 +9,10 @@ Hrgsite::Application.routes.draw do
   
   get 'admin', to: 'admin#index'
   
-  match "postimages/get/:id" => "posts#get", :as => "image"
+  match "postimages/get/:id" => "news#get", :as => "image"
+  
+  match '/news/:id/:title' => 'news#show', :as => :post_with_title
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

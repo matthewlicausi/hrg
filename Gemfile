@@ -20,6 +20,9 @@ gem 'tinymce-rails'
 # for truncating HTML on the news index page
 gem "html_truncator", "~>0.2"
 
+# for linkedIn sharing
+gem 'shareable'
+
 # for paginating on the news index page
 gem 'bootstrap-will_paginate'
 
