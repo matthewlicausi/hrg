@@ -1,14 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hrgsite</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Harvest Resource Group - Global Sales and Business Development Professionals</title>
+<!-- Style -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<!-- Responsive -->
+<link href="/css/responsive.css" rel="stylesheet">
+<!-- Choose Layout -->
+<link href="/css/layout-semiboxed.css" rel="stylesheet">
+<!-- Choose Skin -->
+<link href="/css/skin-khaki.css" rel="stylesheet">
+<!-- Favicon -->
+<link rel="shortcut icon" href="/img/favicon.ico">
+<!-- IE -->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>	   
+    <![endif]-->
+<!--[if lte IE 8]>
+	<link href="css/ie8.css" rel="stylesheet">
+	 <![endif]-->
+	   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body class="off">
+<!-- /.wrapbox start-->
+<div class="wrapbox">
+	<!-- TOP AREA
+================================================== -->
+	<section class="toparea">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 top-text pull-left animated fadeInLeft">
+				<i class="icon-phone"></i> Phone: (877) 920 4688 <span class="separator"></span><i class="icon-envelope"></i> Email: <a href="mailto:hrginfo@harvestresourcegroup.com">hrginfo@harvestresourcegroup.com</a>
+			</div>
+			<div class="col-md-6 text-right animated fadeInRight">
+				<div class="social-icons">
+					<strong>Connect With Us</strong><a class="icon icon-linkedin" href="http://www.linkedin.com/company/1466513"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- /.toparea end-->
+	<!-- NAV
+================================================== -->
+	<nav class="navbar navbar-fixed-top wowmenu" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand logo-nav" href="index.html"><img src="/img/logo_gold.png" alt="logo"></a>
+		</div>
+		<ul id="nav" class="nav navbar-nav pull-right">
+			<li class="dropdown"><a href="index.html">Home</a></li>
+			<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <i class="icon-angle-down"></i></a>
+			<ul class="dropdown-menu">
+				<li><a href="businessconsulting.html">Sales & Business Development Consulting</a></li>
+				<li><a href="hro.html">HR Outsourcing</a></li>
+			</ul>
+			</li>
+			<li class="dropdown">
+			<a href="about.html">About</a>
+			</li>
+			<li class="dropdown active">
+			<a href="news.html">News</a>
+			</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>		
+	</div>	
+	</nav>
+	<!-- /nav end-->
 <%= yield %>
 
+	</div>
+	<!-- /.wrapsemibox end-->
+	<!-- BEGIN FOOTER
+================================================== -->
+	<section>
+	<div class="footer">
+		<div class="container animated fadeInUpNow notransition">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="row bottomspace20"><img src="/img/hrologo_white.png" class="pull-left img-responsive" alt="" style="max-width:180px;"></div>
+					<p>
+						 The HRG team delivers quality expertise in all key disciplines related to sales, business development and HR management success.
+					</p><br>
+					<div class="col-md-3"><img src="/img/ci-icon.png" class="img-responsive" alt=""></div>
+					<div class="col-md-3"><img src="/img/esac.png" class="img-responsive" alt=""></div>
+					<div class="col-md-3"><img src="/img/napeo.png" class="img-responsive" alt=""></div>
+					<div class="col-md-3"></div>
+				</div>
+				<div class="col-md-4">
+					<h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
+					<div class="footermap">
+						<p>
+							<strong>Address: </strong> 4950 Central  #601<br>
+													   Kansas City, Missouri 64112
+						</p>
+						<p>
+							<strong>Phone: </strong> + 1 (877) 920 4688
+						</p>
+						<p>
+							<strong>Email: </strong> hrginfo@harvestresourcegroup.com
+						</p>
+						<ul class="social-icons list-soc">
+							<li><a href="http://www.linkedin.com/company/1466513"><i class="icon-linkedin"></i></a></li>
+						</ul>
+						
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+					<!-- Monthly Newsletter -->
+					<h1 class="title"><span class="colortext">N</span><span class="font100">ewsletter</span></h1>
+					<form action="http://harvestresourcegroup.us3.list-manage.com/subscribe/post?u=68f0342d76316ee3d1b8ac26b&amp;id=1fe638a384" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div class="input-group">
+							<input type="text" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+							<div style="position: absolute; left: -5000px;"><input type="text" name="b_68f0342d76316ee3d1b8ac26b_1fe638a384" value=""></div>                            
+							<span class="input-group-btn">
+								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-warning" style="background-color: #f0ad4e; color: #333">
+							</span>
+						</div><!-- /input-group -->                    
+					</form>
+					<div class="clearfix">
+					</div>                        
+				</div>
+			</div>
+		</div>
+	</div>
+	<p id="back-top">
+		<a href="#top"><span></span></a>
+	</p>
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<p class="pull-left">
+						 &copy; Copyright 2014 Harvest Resource Group
+					</p>
+				</div>
+				<div class="col-md-8">
+					<ul class="footermenu pull-right">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- /footer section end-->
+</div>
+<!-- /.wrapbox ends-->
+<!-- SCRIPTS, placed at the end of the document so the pages load faster
+================================================== -->
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/common.js"></script>
 </body>
 </html>
