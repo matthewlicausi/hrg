@@ -20,6 +20,9 @@ gem 'tinymce-rails'
 # for truncating HTML on the news index page
 gem "html_truncator", "~>0.2"
 
+# for paginating on the news index page
+gem 'bootstrap-will_paginate'
+
 # for uploading images
 gem "paperclip", "~> 4.1"
 
