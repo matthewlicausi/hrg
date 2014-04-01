@@ -4,7 +4,7 @@ class AdminController < ApplicationController
 	  
 	  if user_signed_in?	
 		
-		#check to see if admin account
+	  #check to see if admin account
 		if user_signed_in? && current_user.role == 'admin'
 
 		end

@@ -149,6 +149,7 @@ DEPENDENCIES
   html_truncator (~> 0.2)
   jquery-rails
   newrelic_rpm
+  nokogiri
   paperclip (~> 4.1)
   pg
   rails (= 3.2.16)
