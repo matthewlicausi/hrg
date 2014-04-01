@@ -1,5 +1,5 @@
 <section class="container">
-<%= form_for(@post) do |f| %>
+<%= simple_form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -11,34 +11,40 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :image, "Attach An Image To This Post" %><br />
-    <%= f.file_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body, :class => "tinymce" %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="row col-md-12">
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :title, required: true %>
+		  </div>
+	  </div>
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :category, :collection => categories, prompt: "Select a Category", required: true %>
+		  </div>
+	  </div>
+	</div>
+	<div class="row col-md-12">
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :image, as: :file, label: 'Add an image to this post?' %>
+		  </div>
+	  </div>
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :author, :collection => authors, prompt: "Select an Author", required: true %>
+		  </div>
+	  </div>
+	</div>
+	  <div class="field">
+		<%= f.input :body, as: :text, input_html: { class: 'tinymce' } %>
+	  </div>
+	  
+	  <div class="field">
+		<%= f.input :user_id, as: :hidden, input_html: {value: current_user} %>
+	  </div>
+	  <div class="actions">
+		<%= f.button :submit, "Save This Post", :class => "btn btn-default col-md-12" %>
+	  </div>
 <% end %>
 <%= tinymce %>
 </section>

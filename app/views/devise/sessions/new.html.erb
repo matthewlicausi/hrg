@@ -1,5 +1,21 @@
-<h2>Sign in</h2>
-
+	<!-- PAGE TITLE
+================================================== -->
+	<section class="pageheader-default text-center">
+	<div class="semitransparentbg">
+	</div>
+	</section>
+	<div class="wrapsemibox">
+		<div class="semiboxshadow text-center">
+			<img src="/img/shp.png" class="img-responsive" alt="">
+		</div>
+		<!-- BLOG
+================================================== -->
+		<section class="container animated fadeInDown notransition">
+			<div class="row col-md-12">
+				<div class="col-md-12" style="padding:0;">
+				  <h4>Sign In</h4>
+				</div>
+			</div>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>

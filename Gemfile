@@ -26,6 +26,9 @@ gem 'shareable'
 # for paginating on the news index page
 gem 'bootstrap-will_paginate'
 
+# for better form control
+gem 'simple_form'
+
 # for uploading images
 gem "paperclip", "~> 4.1"
 

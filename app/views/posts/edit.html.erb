@@ -11,8 +11,13 @@
 		<!-- BLOG
 ================================================== -->
 		<section class="container animated fadeInDown notransition">
-
+			<div class="row col-md-12">
+				<div class="col-md-6" style="padding:0;">
+				  <h4>Edit Post</h4>
+				</div>
+				<div class="col-md-6" style="text-align:right;">
+					<%= link_to 'Cancel Edit', posts_path, :class => "label label-danger" %>
+				</div>
+			</div>
 <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>

@@ -9,5 +9,10 @@ class Post < ActiveRecord::Base
   do_not_validate_attachment_file_type :image
   
   belongs_to :user
+  
+  validates :author, :presence => true
+  validates :title, :presence => true
+  validates :category, :presence => true
+  validates :body, :presence => true
 end
 

@@ -114,6 +114,9 @@ GEM
     shareable (0.0.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    simple_form (2.1.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -151,5 +154,6 @@ DEPENDENCIES
   rails (= 3.2.16)
   sass-rails (~> 3.2.3)
   shareable
+  simple_form
   tinymce-rails
   uglifier (>= 1.0.3)

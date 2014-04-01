@@ -5,7 +5,7 @@ Hrgsite::Application.routes.draw do
 
   devise_for :users
   
-  root :to => "admin#index"
+  root :to => "posts#index"
   
   get 'admin', to: 'admin#index'
   
