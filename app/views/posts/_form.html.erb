@@ -40,7 +40,7 @@
 	  </div>
 	  
 	  <div class="field">
-		<%= f.input :user_id, as: :hidden, input_html: {value: current_user} %>
+		<%= f.input :user_id, as: :hidden, input_html: {value: current_user.id} %>
 	  </div>
 	  <div class="actions">
 		<%= f.button :submit, "Save This Post", :class => "btn btn-default col-md-12" %>

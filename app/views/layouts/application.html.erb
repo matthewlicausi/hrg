@@ -7,8 +7,16 @@
 <title>Harvest Resource Group - A Kansas City ASO, PEO and HR Outsourcing Service Provider</title>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Harvest Resource Group - A Kansas City ASO, PEO and HR Outsourcing Service Provider"/>
-<meta property="og:url" content="http://www.harvestresourcegroup.com/"/>
+<% if @post.nil? %>
+	<meta property="og:title" content="Harvest Resource Group - A Kansas City ASO, PEO and HR Outsourcing Service Provider"/>
+	<meta property="og:url" content="http://www.harvestresourcegroup.com/"/>
+<% else %>
+	<meta property="og:title" content="<%= @post.title %>"/>
+	<meta property="og:url" content="<%= "http://www.harvestresourcegroup.com" + post_path(@post) %>"/>
+	<% if @post.image? %>
+	<meta property="og:image" content="<%= "http://www.harvestresourcegroup.com" + @post.image.url %>" />
+	<% end %>
+<% end %>
 <meta property="og:site_name" content="Harvest Resource Group - A Kansas City ASO, PEO and HR Outsourcing Service Provider"/>
 <!-- Style -->
 <link href="/css/bootstrap.css" rel="stylesheet">
@@ -74,9 +82,19 @@
 			<li class="dropdown">
 			<a href="/about.html">About</a>
 			</li>
-			<li class="dropdown active">
-			<%= link_to "News", news_url %>
-			</li>
+			<% if user_signed_in? %> 
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">News <i class="icon-angle-down"></i></a>
+				<ul class="dropdown-menu">
+					<li><%= link_to "View as Guest", news_url %></li>
+					<li><%= link_to "Edit Posts", posts_path %></li>
+				</ul>
+				</li>
+			<% else %> 
+				<li class="dropdown active">
+				<%= link_to "News", news_url %>
+				</li>
+			<% end %> 
 			<li><a href="/contact.html">Contact</a></li>
 		</ul>		
 	</div>	

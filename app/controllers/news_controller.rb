@@ -11,6 +11,8 @@ class NewsController < ApplicationController
 	    @posts = Post.paginate(:page => params[:page], :per_page => 4).order("created_at DESC")
 	  end
 	  
+	  @post = nil
+	  
 	  
 	end
 	
