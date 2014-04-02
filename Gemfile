@@ -15,7 +15,7 @@ gem 'newrelic_rpm'
 gem 'devise'
 
 # for WYSIWYG blog posts
-gem 'tinymce-rails'
+gem 'tinymce-rails', :git => "https://github.com/spohlenz/tinymce-rails.git", :branch => "tinymce-4"
 
 # for truncating HTML on the news index page
 gem "html_truncator", "~>0.2"

@@ -23,7 +23,7 @@
 					    <!-- POSTS -->
 					    <% @posts.each do |post| %>
 							<div class="text-center">
-								<h2><%= link_to post.title, post_with_title_path(post, :title => post.title) %></h2>
+								<h2><%= link_to post.title, post_with_title_path(post, :title => post.slug) %></h2>
 								<span class="meta bottomspace30">By <%= link_to post.author, news_path(:author => post.author ) %><span class="bullet"> • </span> <%= post.created_at.strftime("%B %d, %Y") %> <span class="bullet"> • </span><%= link_to post.category, news_path(:category => post.category ) %></span>
 							</div>
 							<% if post.image?  %>
@@ -35,7 +35,7 @@
 							<div class="col-md-12 bottomspace20">
 							<% end %>
 								<%= HTML_Truncator.truncate(post.body.html_safe, 75).html_safe %>
-								<%= link_to "Read More", post_with_title_path(post, :title => post.title), html_options = {:class=>"btn btn-default"} %>
+								<%= link_to "Read More", post_with_title_path(post, :title => post.slug), html_options = {:class=>"btn btn-default"} %>
 							</div>
 							<hr class="clearfix">
 							

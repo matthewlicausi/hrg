@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
+	
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -34,6 +34,7 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = current_user.posts.new
+    @post_exists = nil
 
     respond_to do |format|
       format.html # new.html.erb

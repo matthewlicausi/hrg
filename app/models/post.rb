@@ -14,5 +14,12 @@ class Post < ActiveRecord::Base
   validates :title, :presence => true
   validates :category, :presence => true
   validates :body, :presence => true
+  
+  
+  def slug
+    slug = title.downcase.gsub(/[\*?{}. ]/, "-")
+    slug.gsub(/-+$/, '')
+  end  
+
 end
 
