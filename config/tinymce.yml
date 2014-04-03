@@ -12,3 +12,4 @@ plugins:
   - image
   - code
   - textcolor
+  - paste
