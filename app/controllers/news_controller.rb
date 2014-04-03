@@ -22,6 +22,10 @@ class NewsController < ApplicationController
 	  
 	  @post_exists = true
 
+
+      @current_url = url_for :only_path=>false,:overwrite_params=>{}
+
+
 	  respond_to do |format|
 	    format.html # show.html.erb
 	    format.json { render json: @post }
