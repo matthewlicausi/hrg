@@ -34,7 +34,7 @@
 							<% else %>
 							<div class="col-md-12 bottomspace20">
 							<% end %>
-								<%= HTML_Truncator.truncate(post.body.html_safe, 75).html_safe %>
+								<%= HTML_Truncator.truncate(post.body.html_safe, 65).html_safe %>
 								<%= link_to "Read More", post_with_title_path(post, :title => post.slug), html_options = {:class=>"btn btn-default"} %>
 							</div>
 							<hr class="clearfix">
