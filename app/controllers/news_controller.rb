@@ -19,6 +19,8 @@ class NewsController < ApplicationController
 	
 	def show
       @post = Post.find(params[:id])
+	  
+	  @post_exists = true
 
 	  respond_to do |format|
 	    format.html # show.html.erb
