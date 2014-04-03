@@ -1,4 +1,19 @@
 Hrgsite::Application.routes.draw do
+  resources :posts
+
+  match "news" => "news#index"
+
+  devise_for :users
+  
+  root :to => "posts#index"
+  
+  get 'admin', to: 'admin#index'
+  
+  match "postimages/get/:id" => "news#get", :as => "image"
+  
+  match '/news/:id/:title' => 'news#show', :as => :post_with_title
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

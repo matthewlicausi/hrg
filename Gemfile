@@ -6,9 +6,31 @@ ruby '1.9.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# use postgresql database
 gem 'pg'
+# for site/server monitoring
 gem 'newrelic_rpm'
 
+# for user authentication
+gem 'devise'
+
+# for WYSIWYG blog posts
+gem 'tinymce-rails', :git => "https://github.com/spohlenz/tinymce-rails.git", :branch => "tinymce-4"
+
+# for truncating HTML on the news index page
+gem "html_truncator", "~>0.2"
+
+# for linkedIn sharing
+gem 'shareable'
+
+# for paginating on the news index page
+gem 'bootstrap-will_paginate'
+
+# for better form control
+gem 'simple_form'
+
+# for uploading images
+gem "paperclip", "~> 4.1"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +45,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# for parsing xml feed
+gem 'nokogiri'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

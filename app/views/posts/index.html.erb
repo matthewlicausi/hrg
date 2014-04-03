@@ -1,0 +1,45 @@
+	<!-- PAGE TITLE
+================================================== -->
+	<section class="pageheader-default text-center">
+	<div class="semitransparentbg">
+	</div>
+	</section>
+	<div class="wrapsemibox">
+		<div class="semiboxshadow text-center">
+			<img src="/img/shp.png" class="img-responsive" alt="">
+		</div>
+		<!-- BLOG
+================================================== -->
+		<section class="container animated fadeInDown notransition">
+		 <div class="row col-md-12">
+		 	<div class="col-md-9" style="padding:0px;">
+		 	  <h3 style="margin-top:0px; margin-left:0px;"> Blog Posts </h3>
+		 	</div>
+		 	<div class="col-md-3" style="text-align:right;">
+		 	  <%= link_to 'Create New Post', new_post_path, :class => "label label-success" %> | <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "label label-danger" %>
+		 	</div>
+		 </div>
+		 <div class="row col-md-12">
+			<table class="table table-striped">
+			  <tr>
+				<th>Title</th>
+				<th>Category</th>
+				<th>Author</th>
+				<th>Create Date</th>
+				<th>Actions</th>
+			  </tr>
+
+			<% @posts.each do |post| %>
+			  <tr>
+				<td><%= link_to post.title, edit_post_path(post) %></td>
+				<td><%= post.category %></td>
+				<td><%= post.author %></td>
+				<td><%= post.created_at.strftime("%B %d, %Y") %></td>
+				<td><%= link_to 'Edit', edit_post_path(post), :class => "label label-warning" %> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "label label-danger" %></td>
+			  </tr>
+			<% end %>
+			</table>
+			<div class="row col-md-12" style="text-align:center;">
+			  <%= will_paginate @posts %>
+			</div>
+		 </div>

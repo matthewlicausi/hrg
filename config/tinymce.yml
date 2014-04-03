@@ -1,0 +1,15 @@
+theme_advanced_toolbar_location: top
+theme_advanced_toolbar_align: left
+theme_advanced_statusbar_location: bottom
+
+  
+toolbar1: styleselect | bold italic | link image | undo redo | table | fullscreen | forecolor | backcolor
+toolbar2: 
+plugins:
+  - table
+  - fullscreen
+  - link
+  - image
+  - code
+  - textcolor
+  - paste

@@ -1,0 +1,50 @@
+<section class="container">
+<%= simple_form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<div class="row col-md-12">
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :title, required: true %>
+		  </div>
+	  </div>
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :category, :collection => categories, prompt: "Select a Category", required: true %>
+		  </div>
+	  </div>
+	</div>
+	<div class="row col-md-12">
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :image, as: :file, label: 'Add an image to this post?' %>
+		  </div>
+	  </div>
+	  <div class="col-md-6">
+		  <div class="field">
+			<%= f.input :author, :collection => authors, prompt: "Select an Author", required: true %>
+		  </div>
+	  </div>
+	</div>
+	  <div class="field">
+		<%= f.input :body, as: :text, input_html: { class: 'tinymce' } %>
+	  </div>
+	  
+	  <div class="field">
+		<%= f.input :user_id, as: :hidden, input_html: {value: current_user.id} %>
+	  </div>
+	  <div class="actions">
+		<%= f.button :submit, "Save This Post", :class => "btn btn-default col-md-12" %>
+	  </div>
+<% end %>
+<%= tinymce %>
+</section>

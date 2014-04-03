@@ -1,0 +1,46 @@
+	<!-- PAGE TITLE
+================================================== -->
+	<section class="pageheader-default text-center">
+	<div class="semitransparentbg">
+	</div>
+	</section>
+	<div class="wrapsemibox">
+		<div class="semiboxshadow text-center">
+			<img src="/img/shp.png" class="img-responsive" alt="">
+		</div>
+		<!-- BLOG
+================================================== -->
+		<section class="container animated fadeInDown notransition">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+<p>
+  <b>Image:</b><br>
+  <%= image_tag @post.image.url, :style => "max-width:250px" %>
+</p>
+<p>
+  <b>Body:</b><br>
+  <%= @post.body.html_safe %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @post.category %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @post.author %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @post.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back to Posts Home', posts_path %>
