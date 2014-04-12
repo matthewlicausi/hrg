@@ -3,7 +3,7 @@ module ApplicationHelper
   def categories
 		  [
 			['HRG Consulting', 'HRG Consulting'],
-			['HRO Outsourcing', 'HRO Outsourcing'],
+			['HR Outsourcing', 'HR Outsourcing'],
 			['Newsletters', 'Newsletters']
 		  ]
   end
