@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   attr_accessible :author, :body, :category, :title, :user_id, :image
   
-  has_attached_file :photo,
+  has_attached_file :image,
     :storage => :s3,
     :bucket => 'S3_BUCKET_NAME',
     :s3_credentials => {
