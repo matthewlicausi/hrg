@@ -35,12 +35,5 @@ Hrgsite::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-	config.paperclip_defaults = {
-	  :storage => :s3,
-	  :s3_credentials => {
-		:bucket => "HRG",
-		:access_key_id => "AKIAJ2YH5SECIDX46MPA",
-		:secret_access_key => "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"
-	  }
-	}
+
 end
