@@ -31,6 +31,7 @@ gem 'simple_form'
 
 # for uploading images
 gem "paperclip", "~> 4.1"
+gem "aws-sdk"
 
 # Gems used only for assets and not required
 # in production environments by default.
